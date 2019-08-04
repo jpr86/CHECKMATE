@@ -1,0 +1,182 @@
+<Platforms-DB>
+    <MovingEmitterPlatform>
+        <name>Chopper_A_</name>
+        <points>5</points>
+        <font-symbol>226</font-symbol>
+        <font-size>20</font-size>
+        <color>Color.red</color>
+        <speed>80.</speed>
+        <System name="A" type="Radar"/>
+    </MovingEmitterPlatform>
+    <MovingEmitterPlatform>
+        <name>Chopper_B_</name>
+        <points>5</points>
+        <font-symbol>226</font-symbol>
+        <font-size>20</font-size>
+        <color>Color.red</color>
+        <speed>80.</speed>
+        <System name="B" type="Radar"/>
+    </MovingEmitterPlatform>
+    <MovingEmitterPlatform>
+        <name>Chopper_C_</name>
+        <points>5</points>
+        <font-symbol>226</font-symbol>
+        <font-size>20</font-size>
+        <color>Color.red</color>
+        <speed>80.</speed>
+        <System name="C" type="Radar"/>
+    </MovingEmitterPlatform>
+    <MovingEmitterPlatform>
+        <name>Chopper_D_</name>
+        <points>5</points>
+        <font-symbol>226</font-symbol>
+        <font-size>20</font-size>
+        <color>Color.red</color>
+        <speed>80.</speed>
+        <System name="D" type="Radar"/>
+    </MovingEmitterPlatform>
+    <MovingEmitterPlatform>
+        <name>Chopper_E_</name>
+        <points>5</points>
+        <font-symbol>226</font-symbol>
+        <font-size>20</font-size>
+        <color>Color.red</color>
+        <speed>80.</speed>
+        <System name="E" type="Radar"/>
+    </MovingEmitterPlatform>
+    <MovingEmitterPlatform>
+        <name>Chopper_F_</name>
+        <points>5</points>
+        <font-symbol>226</font-symbol>
+        <font-size>20</font-size>
+        <color>Color.red</color>
+        <speed>80.</speed>
+        <System name="F" type="Radar"/>
+    </MovingEmitterPlatform>
+    <RadarPlatform>
+        <name>Fixed_A_</name>
+        <points>5</points>
+        <font-symbol>1071</font-symbol>
+        <color>Color.red</color>
+        <System name="A" type="Radar"/>
+    </RadarPlatform>
+    <RadarPlatform>
+        <name>Fixed_B_</name>
+        <points>5</points>
+        <font-symbol>1071</font-symbol>
+        <color>Color.red</color>
+        <System name="B" type="Radar"/>
+    </RadarPlatform>
+    <RadarPlatform>
+        <name>Fixed_C_</name>
+        <points>5</points>
+        <font-symbol>360</font-symbol>
+        <color>Color.red</color>
+        <System name="C" type="Radar"/>
+    </RadarPlatform>
+    <RadarPlatform>
+        <name>Fixed_D_</name>
+        <points>5</points>
+        <font-symbol>360</font-symbol>
+        <color>Color.red</color>
+        <System name="D" type="Radar"/>
+    </RadarPlatform>
+    <RadarPlatform>
+        <name>Fixed_E_</name>
+        <points>5</points>
+        <font-symbol>360</font-symbol>
+        <color>Color.red</color>
+        <System name="E" type="Radar"/>
+    </RadarPlatform>
+    <RadarPlatform>
+        <name>Fixed_F_</name>
+        <points>5</points>
+        <font-symbol>360</font-symbol>
+        <color>Color.red</color>
+        <System name="F" type="Radar"/>
+    </RadarPlatform>
+    <Aircraft>
+        <name>Rocky</name>
+        <points>10</points>
+        <font-symbol>102</font-symbol>
+        <font-size>20</font-size>
+        <color>Color.blue</color>
+        <speed>480.</speed>
+        <max-range>4000.</max-range>
+    </Aircraft>
+    <EarlyWarningSite>
+        <name>Site 1</name>
+        <points>0</points>
+        <font-symbol>245</font-symbol>
+        <color>Color.red</color>    
+        <moving-time min="900." mean="1200."/>
+        <stationary-time min="10800." mean="14400."/> 
+    </EarlyWarningSite>
+    <SAMTEL>
+        <name>TEL_2</name>
+        <points>5</points>
+        <font-symbol>362</font-symbol>
+        <font-size>10</font-size>
+        <color>Color.red</color>
+        <Weapon name="A" num="6"/>
+    </SAMTEL>
+    <SAMBattalion>
+        <name>Battalion</name>
+        <points>0</points>
+        <font-symbol>245</font-symbol>
+        <color>Color.red</color>       
+        <max-speed>50.</max-speed>
+        <moving-time min="300." mean="900."/>
+        <hiding-time min="1200." mean="3600."/>
+        <setup-time min="300." mean="600."/>
+        <teardown-time min="300." mean="600."/>
+        <deployed-time min="1800." mean="5400."/>
+        <delay min="10." mean="10."/>
+        <age-out>180.</age-out>
+        <track-capacity>10</track-capacity>
+        <target-capacity>4</target-capacity>
+        <assignment-threshold>2.</assignment-threshold>
+        <acquisition-threshold>1.2</acquisition-threshold>
+    </SAMBattalion>
+    <SAMSite>
+        <name>Site 2</name>
+        <points>0</points>
+        <font-symbol>245</font-symbol>
+        <color>Color.red</color>       
+        <max-speed>50.</max-speed>
+        <moving-time min="300." mean="900."/>
+        <hiding-time min="1200." mean="3600."/>
+        <setup-time min="300." mean="600."/>
+        <teardown-time min="300." mean="600."/>
+        <deployed-time min="1800." mean="5400."/>
+        <delay min="10." mean="10."/>
+        <age-out>180.</age-out>
+        <track-capacity>2</track-capacity>
+        <target-capacity>1</target-capacity>
+        <engagement-threshold>1.5</engagement-threshold>            
+        <fully-guided-engagement-probability>0.5</fully-guided-engagement-probability>
+        <semi-guided-engagement-probability>0.5</semi-guided-engagement-probability>      
+        <fully-guided-acquisition-threshold>1.1</fully-guided-acquisition-threshold>
+        <fully-guided-tracking-threshold>0.9</fully-guided-tracking-threshold>
+        <fully-guided-firing-threshold>0.8</fully-guided-firing-threshold>  
+        <semi-guided-acquisition-threshold>0.8</semi-guided-acquisition-threshold>
+        <semi-guided-firing-threshold>0.7</semi-guided-firing-threshold>
+        <semi-guided-tracking-time>4.</semi-guided-tracking-time>
+    </SAMSite>   
+    <JammerAircraft>
+        <name>Jammer_A_</name>
+        <points>50</points>
+        <font-symbol>108</font-symbol>
+        <font-size>20</font-size>
+        <color>Color.blue</color>
+        <max-range>4000</max-range>
+        <speed>480.</speed>
+        <rcs>1</rcs>
+        <System name="tlr2" type="Receiver">
+            <ThreeLevelTableLookupReceiver>
+                <scan-period>3.</scan-period>            
+            </ThreeLevelTableLookupReceiver>
+        </System>       
+        <System name="aj" type="Jammer"/>
+    </JammerAircraft>
+</Platforms-DB>

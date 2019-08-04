@@ -1,0 +1,17 @@
+<Weapons-DB>
+    <SAM>
+        <name>A</name>
+        <color>Color.red</color>
+        <font-symbol>173</font-symbol>
+        <font-size>10</font-size>
+        <lethal-range>30</lethal-range>
+        <pk>0.6</pk>
+        <speed>2000.</speed>
+        <MovePlatformBehavior type="SAMFlyoutBehavior">
+            <kinematic-update-period>1.</kinematic-update-period>                
+        </MovePlatformBehavior>  
+        <active-guidance-range>0.</active-guidance-range>
+        <max-gs>20.</max-gs>
+        <simdis-icon>sa-6_gainful</simdis-icon>
+    </SAM>
+</Weapons-DB>

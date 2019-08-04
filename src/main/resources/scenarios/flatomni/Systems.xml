@@ -1,0 +1,136 @@
+<Systems-DB>
+    <Radars>
+        <Radar>
+            <name>A</name>
+            <color>green</color>
+            <reference-range>100</reference-range>
+            <scan-period>20</scan-period>
+            <classification>0</classification>
+<!-- Next 3 needed only to support SensitivityReceiver
+            <power>1000</power>
+            <sidelobe-gain>-5.</sidelobe-gain>
+            <frequency>4000.</frequency>
+-->
+            <emit-time min="120." mean="300."/>
+            <silent-time min="600." mean="900."/>
+            <function>EW</function>
+        </Radar>
+        <Radar>
+            <name>B</name>
+            <color>green</color>
+            <reference-range>200</reference-range>
+            <scan-period>30</scan-period>
+            <classification>1</classification>
+            <power>100000</power>
+            <sidelobe-gain>-5.</sidelobe-gain>
+            <frequency>4000.</frequency>
+            <emit-time min="240." mean="360."/>
+            <silent-time min="600." mean="800."/>  
+            <function>EW</function>
+        </Radar>
+        <Radar>
+            <name>C</name>
+            <color>yellow</color>
+            <reference-range>50</reference-range>
+            <scan-period>10</scan-period>
+            <classification>2</classification>
+            <emit-time min="20." mean="30."/>
+            <silent-time min="20." mean="30."/>   
+            <function>TA</function>
+        </Radar>    
+        <Radar>
+            <name>D</name>
+            <color>yellow</color>
+            <reference-range>30</reference-range>
+            <scan-period>10</scan-period>
+            <classification>3</classification>
+            <emit-time min="30." mean="60."/>
+            <silent-time min="360." mean="500."/>    
+            <function>TA</function>
+        </Radar>  
+        <Radar>
+            <name>E</name>
+            <color>red</color>
+            <reference-range>90</reference-range>
+            <scan-period>10</scan-period>
+            <classification>4</classification>
+            <emit-time min="20." mean="40."/>
+            <silent-time min="600." mean="900."/>
+            <function>TT</function>
+        </Radar>  
+        <Radar>
+            <name>F</name>
+            <color>red</color>
+            <reference-range>35</reference-range>
+            <scan-period>1</scan-period>
+            <classification>5</classification>
+            <Function>TT</Function>
+        </Radar> 
+    </Radars>
+    <Receivers>
+        <CookieCutterReceiver>
+            <name>ccr</name>
+            <detection-range>50.</detection-range>
+            <scan-period>3.</scan-period>
+            <simdis-display value="true" color="0x6000ff00"/>
+        </CookieCutterReceiver>
+        <SensitivityReceiver>
+            <name>sr</name>
+            <sensitivity>-70.</sensitivity>
+            <freq-low>2000.</freq-low>
+            <freq-high>18000.</freq-high>
+            <scan-period>10.</scan-period>
+        </SensitivityReceiver>
+        <TableLookupReceiver>
+            <name>tlr</name>
+            <simdis-display value="true"/>
+            <detection-range>
+                <classification>0</classification>
+                <range>80.</range>
+                <simdis-color>green</simdis-color>
+            </detection-range>
+            <detection-range>
+                <classification>1</classification>
+                <range>300.</range>
+                <simdis-color>yellow</simdis-color>
+            </detection-range>
+            <detection-range>
+                <classification>5</classification>
+                <range>300.</range>
+            </detection-range>
+            <scan-period>10.</scan-period>
+        </TableLookupReceiver>
+    </Receivers>
+    <Jammers>
+        <BasicJammer>
+            <name>bj</name>
+            <reference-range>100.</reference-range>
+            <pa-effectiveness>.2</pa-effectiveness>
+            <ra-effectiveness>.8</ra-effectiveness>
+        </BasicJammer>
+        <AssignmentsJammer>
+            <name>aj</name>
+            <erp>57.</erp>
+            <max-assignments>8</max-assignments>
+            <JammingAssignment type="PA">
+                <Coverage>
+                    <classification>0</classification>
+                    <reference-range>100.</reference-range>
+                    <effectiveness>0.8</effectiveness>
+                </Coverage>
+                <Coverage>
+                    <classification>1</classification>
+                    <reference-range>100.</reference-range>
+                    <effectiveness>0.4</effectiveness>
+                </Coverage>
+            </JammingAssignment>
+            <JammingAssignment type="RA">
+                <Coverage>
+                    <classification>0</classification>
+                    <reference-range>100.</reference-range>
+                    <effectiveness>0.8</effectiveness>
+                </Coverage>
+            </JammingAssignment>          
+        </AssignmentsJammer>
+    </Jammers>
+</Systems-DB>

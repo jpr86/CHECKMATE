@@ -1,0 +1,47 @@
+# -*- Mode: sh -*-
+# Simdis v 9.2.x User Preferences File
+
+# To change any of the SIMDIS preferences, it is highly recommended
+# that users create a second preference file called mysimdis.prefs
+# When a new version of SIMDIS is installed, the simdis.prefs file
+# will be re-set to the "factory" settings.  The mysimdis.prefs file,
+# however, will remain intact.
+#
+# The mysimdis.prefs must reside in the same directory as the
+# simids.prefs is found.  SIMDIS will give precedence to options
+# set in mysimdis.prefs.
+#
+# This file is meant to serve as a template example for the
+# mysimdis.prefs.  Examples provided are typical settings
+# used by the SIMDIS developers.
+#
+# It is also good practice to only include preferences that change
+# in your mysimdis.prefs file.  Overwriting this file with the
+# default simdis.prefs can cause problems when a changed preference
+# needs to be identified.
+#
+simdis FullTime "seconds"
+simdis CornerLogo off
+platform DynamicScale on
+beam lighted on
+beam type antenna
+beam range 180.0
+gate style alpha
+tracks TrackLength 7200 
+tracks DisplayTrackMode "ribbon"
+platform DistanceUnits "nm"
+beam DistanceUnits "nm"
+gate DistanceUnits "nm"
+rangemanager GroundDistance DistanceUnits "nautical miles"
+rangemanager SlantDistance DistanceUnits "nautical miles"
+rangemanager Altitude DistanceUnits "feet"
+rangemanager BeamGroundDistance DistanceUnits "nautical miles"
+rangemanager BeamSlantDistance DistanceUnits "nautical miles"
+rangemanager BeamAltitude DistanceUnits "feet"
+rangemanager DownRange DistanceUnits "nautical miles"
+rangemanager CrossRange DistanceUnits "nautical miles"
+rangemanager DownValue DistanceUnits "feet"
+simdis EyeDistanceUnits "nautical miles"
+
+
+

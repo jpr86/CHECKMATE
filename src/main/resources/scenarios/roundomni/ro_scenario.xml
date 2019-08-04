@@ -1,0 +1,183 @@
+<Scenario>
+    <!-- Test of a simple IADS scenario -->
+    <Systems-DB>Systems.xml</Systems-DB>
+    <Platforms-DB>Platforms.xml</Platforms-DB>
+    <Weapons-DB>Weapons.xml</Weapons-DB>
+    <!--    <Sub-Scenario>uav_scenario.xml</Sub-Scenario> -->
+    <simulation-start-time>0.</simulation-start-time>
+    <simulation-end-time>20000.</simulation-end-time>
+    
+    <Universe class="GUIUniverse">
+        <Space class="Cartesian2DSpace" units="DD">
+            <v-dim min="37.8" max="43.8"/>
+            <h-dim min="-78.25" max="-73.25"/>       
+        </Space>
+        <RandomNumberGenerator class="MersenneTwisterFast"/>
+        <EarthModel>Round</EarthModel>
+        <TerrainModel>Bald</TerrainModel>
+        <View class="SimpleView">
+            <name>Main View</name>
+        </View>
+    </Universe>
+    <Simdis>
+        <RefLLA lat="37.8" long="-78.25" alt="0."/>
+        <GOGFile>usa_eastcoast.gog</GOGFile>
+        <!--
+        <DEDMap>Kuai</DEDMap>
+        <WVSMap>Kuai1.wvs</WVSMap>
+        -->
+        <Classification label="UNCLASSIFIED" color="green"/>
+    </Simdis>
+
+    <!-- Site 1 - an early warning site -->
+    <Player platform="Fixed_A_">
+        <RadarPlatform>
+            <name>Fixed_A_1</name>
+            <Location type="Fixed">
+                <random-radius>0.</random-radius>
+            </Location>
+            <superior-id>50001</superior-id>
+            <simdis-icon>spoon_rest</simdis-icon>
+        </RadarPlatform>
+        <paintable-view>Main View</paintable-view>
+    </Player>
+    <Player platform="Fixed_B_">
+        <RadarPlatform>
+            <name>Fixed_B_1</name>
+            <Location type="Fixed">
+                <random-radius>5.</random-radius>
+            </Location>
+            <superior-id>50001</superior-id>
+            <simdis-icon>spoon_rest</simdis-icon>
+        </RadarPlatform>
+        <paintable-view>Main View</paintable-view>
+    </Player>
+    <Player platform="Site 1">
+        <EarlyWarningSite>
+            <name>Site 1</name>
+            <id>50001</id>
+            <Location type="Fixed">
+                <point2D x="40." y="-75.75"/>
+                <random-radius>0.</random-radius>
+            </Location>       
+            <superior-id>50003</superior-id>
+        </EarlyWarningSite>
+        <paintable-view>Main View</paintable-view>
+    </Player>
+    <!-- Site 2 - a SAM site -->
+    <Player>
+        <RadarPlatform>
+            <name>SAM_Radars_2</name>
+            <points>5</points>
+            <font-symbol>360</font-symbol>
+            <color>Color.red</color>
+            <Location type="Fixed">
+                <random-radius>1.</random-radius>
+            </Location>
+            <System name="C" type="Radar"/>
+            <System name="F" type="Radar"/>
+            <simdis-icon>str_flsh</simdis-icon>
+            <superior-id>50002</superior-id>
+        </RadarPlatform>
+        <paintable-view>Main View</paintable-view>
+    </Player>
+    <Player platform="Tel_2">
+        <SAMTEL>
+            <Location type="Fixed">
+                <random-radius>1.</random-radius>
+            </Location>
+            <superior-id>50002</superior-id>
+            <simdis-icon>sa-6_launcher_des</simdis-icon>
+        </SAMTEL>
+        <paintable-view>Main View</paintable-view>
+    </Player>
+    <Player platform="Site 2">
+        <SAMSite>
+            <name>Site 2</name>
+            <id>50002</id>
+            <Location type="Fixed">
+                <point2D x="40" y="-75.75"/>
+                <random-radius>0.</random-radius>
+            </Location>       
+            <superior-id>50004</superior-id>
+        </SAMSite>       
+        <paintable-view>Main View</paintable-view>
+    </Player>
+    <Player>
+        <PassThroughC2>
+            <name>Passthrough</name>
+            <id>50003</id>
+            <points>0</points>
+            <font-symbol>357</font-symbol>
+            <color>Color.red</color>
+            <Location type="Fixed">
+                <point2D x="40.3" y="-75.75"/>
+                <random-radius>0.</random-radius>
+            </Location>
+            <delay min="20." mean="20."/>
+            <age-out>180.</age-out>
+            <track-capacity>20</track-capacity>
+            <superior-id>50004</superior-id>
+        </PassThroughC2>
+        <paintable-view>Main View</paintable-view>
+    </Player>
+    <Player>
+        <TargetAssignmentC2>
+            <name>Target Assigner</name>
+            <id>50004</id>
+            <points>0</points>
+            <font-symbol>359</font-symbol>
+            <color>Color.red</color>
+            <Location type="Fixed">
+                <point2D x="40.3" y="-75.25"/>
+                <random-radius>0.</random-radius>
+            </Location>
+            <delay min="20." mean="20."/>
+            <age-out>180.</age-out>
+            <track-capacity>50</track-capacity>
+            <target-capacity>10</target-capacity>
+            <assignment-threshold>2.</assignment-threshold>
+        </TargetAssignmentC2>
+        <paintable-view>Main View</paintable-view>
+    </Player>
+    <Player platform="Rocky">
+        <Aircraft>
+            <start-time>0.</start-time>
+            <rcs>1.</rcs>
+            <MovePlatformBehavior type="PeriodicRoutePointsBehavior">
+                <kinematic-update-period>10.</kinematic-update-period>
+                <Route type="Fixed">
+                    <route-point>
+                        <point3D x="37.8" y="-77.25" z="24000." units="DD"/>
+                        <orbit>250.</orbit>
+                    </route-point>
+                    <route-point>
+                        <point3D x="41.3" y="-74.25" z="24000." units="DD"/>
+                        <orbit>100.</orbit>
+                    </route-point>
+                    <route-point>
+                        <point3D x="40.3" y="-75.75" z="24000." units="DD"/>
+                    </route-point>
+                </Route>
+            </MovePlatformBehavior>
+            <simdis-icon>fa-18e_super_hornet</simdis-icon>
+        </Aircraft>
+        <paintable-view>Main View</paintable-view>
+    </Player>
+    <Player platform="Jammer_A_">
+        <JammerAircraft>
+            <start-time>0.</start-time>
+            <MovePlatformBehavior type="TwoWayRoutePointsBehavior">
+                <kinematic-update-period>10.</kinematic-update-period>
+                <Route type="Fixed">
+                    <route-point>
+                        <point3D x="39." y="-77." z="24000." units="DD"/>
+                        <orbit>10000.</orbit>
+                    </route-point>
+                </Route>
+            </MovePlatformBehavior>       
+            <simdis-icon>fa-18e_super_hornet</simdis-icon>
+        </JammerAircraft>
+        <paintable-view>Main View</paintable-view>
+    </Player>
+</Scenario>
