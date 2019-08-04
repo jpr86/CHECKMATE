@@ -1,8 +1,7 @@
 # Coadaptive Heterogeneous simulation Engine for Combat Kill-webs and Multi-Agent Training Environment (CHECKMATE)
 CHECKMATE is a fast executing, agent-based simulation of air combat intended to support development of advanced algorithms
 
-Source code is coming soon. Please be patient as I take a bit of time to refactor this previously private code with 
-copyright and license statements. 
+[This Version is Pre-release and is not yet stable. Patience, Padawan.]
 
 CHECKMATE is fast executing agent-based simulation of air combat designed to support
 rapid development of advanced algorithms. It is constructed using the Fast Universal
