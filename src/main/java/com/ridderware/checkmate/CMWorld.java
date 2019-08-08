@@ -101,7 +101,7 @@ public class CMWorld implements IAgentFactory
 
     private File asi_file = null;
 
-    /** Keeps track of all fonts used to draw objects in the Swarm GUI */
+    /** Keeps track of all fonts used to draw objects in the FUSE GUI */
     protected HashMap<Float, Font> size_font_map = new HashMap<>();
 
     //  Simdis XML inputs
@@ -339,7 +339,7 @@ public class CMWorld implements IAgentFactory
     }
 
     /**
-     * Called by the Swarm framework to populate the universe of agents prior to each
+     * Called by the FUSE framework to populate the universe of agents prior to each
      * simulation run.
      * @param universe the universe to be populated with agents.
      */
@@ -408,7 +408,7 @@ public class CMWorld implements IAgentFactory
     /**
      * Returns the space for this simulation.
      *
-     * @return a Swarm Space object.
+     * @return a FUSE Space object.
      */
     public Space getSpace()
     {
@@ -1270,7 +1270,7 @@ public class CMWorld implements IAgentFactory
     /**
      * Reads the scenario defined by the passed in XML filename.
      *
-     * @param scenario Swarm Scenario object into which the scenario will
+     * @param scenario FUSE Scenario object into which the scenario will
      * be read.
      * @param scenarioFileName the name of the XML file containing the
      * scenario.

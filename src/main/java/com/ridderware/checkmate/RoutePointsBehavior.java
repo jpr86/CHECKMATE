@@ -240,7 +240,7 @@ public abstract class RoutePointsBehavior extends MovePlatformBehavior
         }
 
         /**
-         * Called by the Swarm framework to get the next time at which to perform the behavior.
+         * Called by the FUSE framework to get the next time at which to perform the behavior.
          * @param current_time current time.
          * @return next time to perform the behavior.
          */
@@ -251,7 +251,7 @@ public abstract class RoutePointsBehavior extends MovePlatformBehavior
         }
 
         /**
-         * Called by the Swarm framework to perform the behavior.  Calls breakOrbit.
+         * Called by the FUSE framework to perform the behavior.  Calls breakOrbit.
          * @param current_time current time.
          */
         @Override

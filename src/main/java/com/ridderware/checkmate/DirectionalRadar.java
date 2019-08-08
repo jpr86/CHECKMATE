@@ -126,7 +126,7 @@ public class DirectionalRadar extends Radar
     }
 
     /**
-     * Called by the Swarm framework to notify the radar of a state change.  This override
+     * Called by the FUSE framework to notify the radar of a state change.  This override
      * gives us the opportunity to call simdisUpdate with the state change.
      * @param old_state previous state.
      * @param new_state new state.
@@ -579,7 +579,7 @@ public class DirectionalRadar extends Radar
         private double delta_t = -1.;
 
         /**
-         * Called by the Swarm framework to return the next schedule time for this behavior
+         * Called by the FUSE framework to return the next schedule time for this behavior
          * to be invoked.
          * @param current_time current simulation time.
          * @return next time at which to call the behavior.
@@ -616,7 +616,7 @@ public class DirectionalRadar extends Radar
         }
 
         /**
-         * Called by the Swarm framework to invoke the behavior.
+         * Called by the FUSE framework to invoke the behavior.
          * @param current_time current simulation time.
          */
         @Override

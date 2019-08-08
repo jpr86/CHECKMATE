@@ -218,7 +218,7 @@ public abstract class MobilePlatform extends Platform
     protected class ActivateBehavior extends Behavior
     {
         /**
-         * Called by the Swarm simulation framework.  Returns the next time at which to
+         * Called by the FUSE simulation framework.  Returns the next time at which to
          * perform the behavior.
          * @param current_time current simulation time.
          * @return time at which to perform the behavior.
@@ -230,7 +230,7 @@ public abstract class MobilePlatform extends Platform
         }
 
         /**
-         * Called by the Swarm simulation framework.  Performs the behavior at the
+         * Called by the FUSE simulation framework.  Performs the behavior at the
          * specified time.
          * @param current_time current simulation time.
          */

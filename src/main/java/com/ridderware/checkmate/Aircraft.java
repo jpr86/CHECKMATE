@@ -138,7 +138,7 @@ public class Aircraft extends MobilePlatform
 
     /**
      * Resets the aircraft to its initial state before each simulation run.  This is
-     * called automatically by the Swarm simulation framework.
+     * called automatically by the FUSE simulation framework.
      */
     @Override
     public void reset()

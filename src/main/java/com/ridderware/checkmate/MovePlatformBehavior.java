@@ -131,7 +131,7 @@ public abstract class MovePlatformBehavior extends Behavior implements IXML
     public abstract void movePlatform(double time);
 
     /**
-     * Called by the Swarm framework.  Returns the next time to perform this behavior.
+     * Called by the FUSE framework.  Returns the next time to perform this behavior.
      * @param current_time current time.
      * @return next time to perform the behavior.
      */
@@ -148,7 +148,7 @@ public abstract class MovePlatformBehavior extends Behavior implements IXML
     }
 
     /**
-     * Called by the Swarm framework to perform the behavior.  This method calls
+     * Called by the FUSE framework to perform the behavior.  This method calls
      * movePlatform.
      * @param current_time the current time.
      */

@@ -192,7 +192,7 @@ public class RadarPlatform extends UncertainLocationPlatform implements IRadarTr
     }
 
     /**
-     * Called by the Swarm framework to paint the agent.
+     * Called by the FUSE framework to paint the agent.
      * @param args see base class documentation.
      * @return a collection of shapes.
      *

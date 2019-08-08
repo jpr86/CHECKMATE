@@ -86,7 +86,7 @@ public class SAM extends Missile
     }
 
     /**
-     * Override of reset.  This is called by the Swarm framework prior to each simulation run.
+     * Override of reset.  This is called by the FUSE framework prior to each simulation run.
      */
     @Override
     public void reset()

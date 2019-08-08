@@ -51,6 +51,7 @@
                 <targetPath>${project.build.directory}</targetPath>
                 <includes>
                     <include>log4j2.properties</include>
+                    <include>fuse.ttf</include>
                     <include>**</include>
                 </includes>
             </resource>

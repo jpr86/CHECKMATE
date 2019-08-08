@@ -250,7 +250,7 @@ public class EarlyWarningSite extends UncertainLocationPlatform implements IRada
     }
 
     /**
-     * Called by the Swarm framework to paint the agent.
+     * Called by the FUSE framework to paint the agent.
      * @param args see base class documentation.
      * @return a collection of shapes.
      *
@@ -275,7 +275,7 @@ public class EarlyWarningSite extends UncertainLocationPlatform implements IRada
 
     /**
      * Behavior to periodically change the state of the platform.  Subclass of the
-     * Swarm framework Behavior class.
+     * FUSE framework Behavior class.
      * @param old_state state changing from.
      * @param new_state state changing to.
      */
@@ -467,7 +467,7 @@ public class EarlyWarningSite extends UncertainLocationPlatform implements IRada
         private double start_time = 0.;
 
         /**
-         * Called by the Swarm framework to get the next scheduled time to perform this
+         * Called by the FUSE framework to get the next scheduled time to perform this
          * behavior.
          * @param current_time current time.
          * @return time at which to next perform the behavior.
@@ -522,7 +522,7 @@ public class EarlyWarningSite extends UncertainLocationPlatform implements IRada
         }
 
         /**
-         * Called by the Swarm framework to perform the behavior.
+         * Called by the FUSE framework to perform the behavior.
          * @param current_time time.
          */
         @Override

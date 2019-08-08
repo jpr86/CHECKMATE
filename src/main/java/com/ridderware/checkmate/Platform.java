@@ -191,7 +191,7 @@ public class Platform extends CMAgent implements Paintable, ISIMDIS
     }
 
     /**
-     * See the base class in the Swarm framework.
+     * See the base class in the FUSE framework.
      * @return ditto.
      */
     @Override
@@ -256,7 +256,7 @@ public class Platform extends CMAgent implements Paintable, ISIMDIS
     }
 
     /**
-     * Called by the Swarm framework to paint the agent.
+     * Called by the FUSE framework to paint the agent.
      * @param args see base class documentation.
      * @return a collection of shapes.
      */

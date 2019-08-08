@@ -278,7 +278,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
     }
 
     /**
-     * Called by Swarm framework to paint the agent.
+     * Called by FUSE framework to paint the agent.
      * @param args see base class docs.
      * @return a collection of shapes to be drawn.
      */
@@ -589,7 +589,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
     }
 
     /**
-     * Callback from the Swarm framework to notify the agent of a state change.
+     * Callback from the FUSE framework to notify the agent of a state change.
      * @param old_state previous (leaving) state.
      * @param new_state new (entering) state.
      */
@@ -898,7 +898,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
     protected class ScanBehavior extends Behavior
     {
         /**
-         * Called by the Swarm framework to get the next time to perform the behavior.
+         * Called by the FUSE framework to get the next time to perform the behavior.
          * @param current_time current time.
          * @return next time to perform the behavior.
          */
@@ -916,7 +916,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
         }
 
         /**
-         * Called by the Swarm framework to perform the behavior.  Calls scanRadar.
+         * Called by the FUSE framework to perform the behavior.  Calls scanRadar.
          * @param current_time current time.
          */
         @Override
@@ -930,7 +930,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
     }
 
     /**
-     * Defines the EmittingState for the radar.  A subclass of Swarm framework State.
+     * Defines the EmittingState for the radar.  A subclass of FUSE framework State.
      */
     protected class EmittingState extends AgentState
     {
@@ -957,7 +957,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
 
         /**
          * Gets the event_time attribute of the StartEmitting object. Called
-         * by the Swarm framework.
+         * by the FUSE framework.
          * @param current_time current simulation time.
          * @return event time.
          */
@@ -968,7 +968,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
         }
 
         /**
-         * Performs the behavior. Called by the Swarm framework.
+         * Performs the behavior. Called by the FUSE framework.
          * @param current_time current simulation time.
          */
         @Override
@@ -1002,7 +1002,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
 
         /**
          * Gets the event_time attribute of the StartEmitting object. Called
-         * by the Swarm framework.
+         * by the FUSE framework.
          * @param current_time current simulation time.
          * @return event time.
          */
@@ -1013,7 +1013,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
         }
 
         /**
-         *  Performs the behavior. Called by the Swarm framework.
+         *  Performs the behavior. Called by the FUSE framework.
          *
          * @param  current_time  current simulation time.
          */
@@ -1038,7 +1038,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
     }
 
     /**
-     * Defines the SilentState for the radar.  A subclass of Swarm framework State.
+     * Defines the SilentState for the radar.  A subclass of FUSE framework State.
      */
     protected class SilentState extends AgentState
     {
@@ -1058,7 +1058,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
     protected class ChangeStateBehavior extends Behavior
     {
         /**
-         * Called by the Swarm framework to determine the next time to perform the behavior.
+         * Called by the FUSE framework to determine the next time to perform the behavior.
          * @param current_time current time.
          * @return next time at which to perform the behavior.
          */
@@ -1098,7 +1098,7 @@ public class Radar extends CMSystem implements Paintable, ISIMDIS
         }
 
         /**
-         * Called by the Swarm framework to perform the behavior.
+         * Called by the FUSE framework to perform the behavior.
          * @param current_time current time.
          */
         @Override

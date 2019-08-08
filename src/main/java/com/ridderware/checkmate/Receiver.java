@@ -225,7 +225,7 @@ public abstract class Receiver extends CMSystem implements ISIMDIS
     protected class ScanReceiverBehavior extends Behavior
     {
         /**
-         * Called by the Swarm framework to determine the next time to perform the behavior.
+         * Called by the FUSE framework to determine the next time to perform the behavior.
          * @param current_time current time.
          * @return next time at which to perform the behavior.
          */
@@ -247,7 +247,7 @@ public abstract class Receiver extends CMSystem implements ISIMDIS
         }
 
         /**
-         * Called by the Swarm framework to perform the behavior.
+         * Called by the FUSE framework to perform the behavior.
          * @param current_time current time.
          */
         @Override
