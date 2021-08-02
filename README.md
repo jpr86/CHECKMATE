@@ -20,4 +20,3 @@ To get SIMDIS, go to the SIMDIS website. Also, the simdis directory contains a S
 For more information, see the README file in the simdis folder.
 
 CHECKMATE is the intellectual property of Jeff Ridder, now being open-sourced under a permissive Apache 2.0 license. 
-If you have any comments, questions, feature requests, please contact: checkmate.air.combat.sim.team@gmail.com. Enjoy!
