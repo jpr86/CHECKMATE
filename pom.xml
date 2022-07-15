@@ -30,7 +30,7 @@
         <dependency>
             <groupId>com.github.jpr86</groupId>
             <artifactId>FUSE</artifactId>
-            <version>1.01</version>
+            <version>1.02</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/xerces/xercesImpl -->
         <dependency>
